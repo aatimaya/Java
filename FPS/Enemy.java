@@ -7,7 +7,7 @@ import javax.swing.*;
 public class Enemy extends JPanel {
     Random randomnumber=new Random();
     int x=randomnumber.nextInt(500);
-    int y=0;
+    int y=randomnumber.nextInt(500);
     Image image;
     Enemy(){
         try{
@@ -16,13 +16,12 @@ public class Enemy extends JPanel {
         catch (Exception e){
 
         }
-        
-        
+           
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.setColor(Color.blue);
-        g.drawImage(image,x,y,80,80,this);
+        g.drawImage(image,x,y,50,50,this);
         //g.fillRect(x,y, 80, 80);
     }
     public void update(){
