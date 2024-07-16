@@ -1,7 +1,8 @@
-import java.beans.Statement;
+//import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class App {
@@ -16,7 +17,6 @@ public class App {
         String password = "aati";
          Connection conn = DriverManager.getConnection(url, username, password);
         System.out.println("Datebase connected ! Ready to work....");
-        '
 
         while(true){
         System.out.println("Hello, World!");
@@ -36,7 +36,7 @@ public class App {
 
             ResultSet rs = statement.executeQuery(query);
             while(rs.next()){
-            System.out.println(rs.getString(columnLabel:"FirstName")+""+rs.getString(columnLabel:"CustomerID");
+            System.out.println(rs.getString("FirstName")+""+rs.getString("CustomerID"));
             }
             
 
